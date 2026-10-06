@@ -1,14 +1,10 @@
 public class Main {
     public static void main(String[] args) {
-        ArrayCollection<Artifact> catalog = new ArrayCollection<>();
+        LinkedCollection<Artifact> catalog = new LinkedCollection<>();
 
-        Artifact a = new Artifact("A101", "Ancient Tool", "Ancient");
-        Artifact b = new Artifact("B205", "Renaissance Painting", "Renaissance");
-        Artifact c = new Artifact("C309", "Medieval Sword", "Medieval");
-
-        catalog.add(a);
-        catalog.add(b);
-        catalog.add(c);
+        catalog.add(new Artifact("A101", "Ancient Tool", "Ancient"));
+        catalog.add(new Artifact("B205", "Renaissance Painting", "Renaissance"));
+        catalog.add(new Artifact("C309", "Medieval Sword", "Medieval"));
 
         Artifact searchKey = new Artifact("B205", "", "");
 
