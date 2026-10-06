@@ -5,3 +5,7 @@ I overrode equals so artifacts with the same ID are treated as the same artifact
 # Phase 2
 
 A linked collection uses extra memory for each node because every item needs a reference to the next node. Arrays use contiguous memory, which usually gives them better cache locality. Linked lists are more flexible for adding items because they do not need to resize an array.
+
+# Phase 3
+
+Comparable gives the Artifact class a natural ordering based on its ID. Collections.sort() uses compareTo() to determine the order. Since both equals() and compareTo() use the artifact ID, two artifacts with the same ID are considered equal and compareTo() returns 0.
